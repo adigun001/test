@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div id="adminLogin">
+            
+            <h2>Admin Login</h2>
+            
+            <input type="password" id="adminPass" placeholder="Enter Admin Password">
+            <button class="start-btn" onclick="loginAdmin()">Login</button>
+        </div>
+    </div>
 
+    <div id="adminPanel" style="display:none;">
+        <h2>Registered Students</h2>
+        <div id="registeredTable"></div> </br>
+        <h2>Students Who Attempted Exam</h2>
+        <div id="resultsTable"></div> </br>
+        
+        <button onclick="clearAllResults()">Clear All Results</button>
+        
+        <div class="links">
+            <a class="start-btn-2"href="register.html">Register Student</a>
+            <a class="start-btn-2" href="test.html">Home page</a>
+            </div>
+    </div>
+
+<script src="admin.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
