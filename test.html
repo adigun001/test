@@ -1,1 +1,100 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CBT Test Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= START SCREEN ================= -->
+<div id="startScreen" class="home-container">
+
+    <h1 class="title">CBT TEST PLATFORM</h1>
+
+    <div class="card">
+        <h2>Student Login</h2>
+
+        <input type="text" id="studentName" placeholder="Enter Full Name">
+        <input type="text" id="studentID" placeholder="Enter Student ID">
+
+        <select id="subjectSelect">
+            <option value="">Select Subject</option>
+            <option value="ict">ICT</option>
+            <option value="mth">Mathematics</option>
+            <option value="phy">Physics</option>
+            <option value="chm">Chemistry</option>
+        </select>
+
+        <button class="start-btn" onclick="loginStudent()">
+            Start Examination
+        </button>
+    </div>
+
+    <div class="links">
+        <a class="start-btn-2"href="register.html">Register Student</a>
+        <!--<a class="start-btn-2" href="admin.html">Admin Panel</a>--->
+    </div>
+
+</div>
+
+
+<!-- ================= EXAM SCREEN ================= -->
+<div id="examScreen" style="display:none;">
+
+    <div class="top-bar">
+        <span id="timer">Time: 05:00</span>
+    </div>
+
+    <div class="progress-container">
+        <div id="progressBar"></div>
+    </div>
+    <p id="progressText">Answered 0 of 0</p>
+
+    <div class="exam-layout">
+
+        <!-- Question Area -->
+        <div class="question-area">
+            <div id="questionContainer"></div>
+
+            <div class="buttons">
+                <button onclick="previousQuestion()">Previous</button>
+                <button onclick="nextQuestion()">Next</button>
+                <button onclick="submitExam()">Submit</button>
+            </div>
+        </div>
+
+        <!-- Question Numbers Panel -->
+        <div class="question-panel">
+            <h3>Questions</h3>
+            <div id="questionNumbers"></div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= RESULT SCREEN ================= -->
+<div id="resultScreen" style="display:none;">
+    <h2>Exam Result</h2>
+    <div id="score"></div>
+</div>
+
+
+<!-- ================= JAVASCRIPT FILES ================= -->
+<!-- All in same folder -->
+<script src="ict.js"></script>
+<script src="mth.js"></script>
+<script src="phy.js"></script>
+<script src="chm.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
